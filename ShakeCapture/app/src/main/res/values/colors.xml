@@ -2,4 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="brand_primary">#FF6750A4</color>
+    <color name="brand_primary_dark">#FF4F378B</color>
+    <color name="surface">#FFFFFBFE</color>
+    <color name="text_primary">#FF1D1B20</color>
+    <color name="text_secondary">#FF625B71</color>
+    <color name="camera_overlay">#CC101014</color>
 </resources>

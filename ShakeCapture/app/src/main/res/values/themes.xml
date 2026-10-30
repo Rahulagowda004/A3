@@ -1,9 +1,22 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.ShakeCapture" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">@color/brand_primary</item>
+        <item name="android:navigationBarColor">@color/surface</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="colorPrimary">@color/brand_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:windowBackground">@color/surface</item>
     </style>
 
     <style name="Theme.ShakeCapture" parent="Base.Theme.ShakeCapture" />
+    <style name="Widget.ShakeCapture.PrimaryButton" parent="Widget.Material3.Button">
+        <item name="android:textSize">17sp</item>
+        <item name="cornerRadius">18dp</item>
+    </style>
+    <style name="Widget.ShakeCapture.SecondaryButton" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:textSize">17sp</item>
+        <item name="cornerRadius">18dp</item>
+    </style>
 </resources>

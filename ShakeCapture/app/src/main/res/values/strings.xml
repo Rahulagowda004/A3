@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">ShakeCapture</string>
+    <string name="home_tagline">Capture the moment, hands-free.</string>
+    <string name="home_description">Shake your device to take a photo. ShakeCapture waits for the movement to stop, then captures after one second.</string>
+    <string name="take_photo">Take a Photo</string>
+    <string name="browse_photos">Browse Photos</string>
+    <string name="home_footer">Your photos stay private on this device.</string>
+    <string name="camera_starting">Starting camera…</string>
+    <string name="camera_instruction">Shake the device, then hold still. A photo is captured one second after shaking stops.</string>
+    <string name="shake_ready">Ready — shake to capture</string>
+    <string name="shake_in_progress">Movement detected — keep shaking</string>
+    <string name="capture_countdown">Steady… capturing in one second</string>
+    <string name="photo_saved">Photo saved successfully</string>
+    <string name="capture_failed">Could not capture the photo</string>
+    <string name="camera_permission_denied">Camera permission is needed to take photos. Enable it in Settings and try again.</string>
+    <string name="camera_initialization_failed">Unable to start the camera</string>
+    <string name="accelerometer_unavailable">This device does not have an accelerometer. Shake capture is unavailable.</string>
+    <string name="gallery_title">Your Photos</string>
+    <string name="gallery_subtitle">Photos captured with ShakeCapture</string>
+    <string name="gallery_empty">No photos yet.\nTake a photo to see it here.</string>
+    <string name="delete_photo">Delete photo</string>
+    <string name="delete_photo_title">Delete this photo?</string>
+    <string name="delete_photo_message">This photo will be permanently removed from ShakeCapture.</string>
+    <string name="delete">Delete</string>
+    <string name="delete_failed">Could not delete the photo</string>
+    <string name="photo_unavailable">This photo is no longer available.</string>
+    <string name="photo_viewer">Full-screen photo</string>
+    <string name="viewer_hint">Tap anywhere to close</string>
 </resources>

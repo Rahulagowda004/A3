@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="190dp"
+    android:layout_margin="6dp">
+    <ImageView
+        android:id="@+id/photo_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_photo_placeholder"
+        android:scaleType="centerCrop" />
+    <ImageButton
+        android:id="@+id/delete_photo"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_gravity="top|end"
+        android:background="@drawable/bg_delete_button"
+        android:contentDescription="@string/delete_photo"
+        android:src="@android:drawable/ic_menu_delete"
+        android:tint="@android:color/white" />
+</FrameLayout>
