@@ -2,6 +2,7 @@ package com.example.shakecapture;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,5 +18,16 @@ public class MainActivity extends AppCompatActivity {
         MaterialButton browsePhotos = findViewById(R.id.browse_photos_button);
         takePhoto.setOnClickListener(v -> startActivity(new Intent(this, CameraActivity.class)));
         browsePhotos.setOnClickListener(v -> startActivity(new Intent(this, GalleryActivity.class)));
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        TextView photoCount = findViewById(R.id.photo_count);
+        if (photoCount != null) {
+            int count = PhotoRepository.getPhotos(this).size();
+            photoCount.setText(getResources().getQuantityString(
+                    R.plurals.home_photo_count, count, count));
+        }
     }
 }

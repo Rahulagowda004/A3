@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Button;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +17,8 @@ import java.util.concurrent.Executors;
 public class GalleryActivity extends AppCompatActivity implements PhotoAdapter.Listener {
     private PhotoAdapter adapter;
     private TextView emptyState;
+    private TextView photoCount;
+    private Button takeFirstPhoto;
     private RecyclerView recyclerView;
     private final ExecutorService repositoryExecutor = Executors.newSingleThreadExecutor();
 
@@ -25,6 +28,10 @@ public class GalleryActivity extends AppCompatActivity implements PhotoAdapter.L
         setContentView(R.layout.activity_gallery);
         recyclerView = findViewById(R.id.photo_grid);
         emptyState = findViewById(R.id.empty_state);
+        photoCount = findViewById(R.id.photo_count);
+        takeFirstPhoto = findViewById(R.id.take_first_photo);
+        takeFirstPhoto.setOnClickListener(v ->
+                startActivity(new Intent(this, CameraActivity.class)));
         adapter = new PhotoAdapter(this);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         recyclerView.setAdapter(adapter);
@@ -44,6 +51,9 @@ public class GalleryActivity extends AppCompatActivity implements PhotoAdapter.L
                 boolean empty = photos.isEmpty();
                 emptyState.setVisibility(empty ? View.VISIBLE : View.GONE);
                 recyclerView.setVisibility(empty ? View.GONE : View.VISIBLE);
+                photoCount.setText(getResources().getQuantityString(
+                        R.plurals.gallery_photo_count, photos.size(), photos.size()));
+                takeFirstPhoto.setVisibility(empty ? View.VISIBLE : View.GONE);
             });
         });
     }
