@@ -13,6 +13,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:paddingTop="12dp"
             android:text="@string/gallery_title"
             android:textColor="@color/brand_primary"
             android:textSize="30sp"
