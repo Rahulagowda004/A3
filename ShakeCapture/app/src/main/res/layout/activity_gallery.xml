@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/gallery_title"
-            android:textColor="@color/text_primary"
+            android:textColor="@color/brand_primary"
             android:textSize="30sp"
             android:textStyle="bold" />
         <TextView
